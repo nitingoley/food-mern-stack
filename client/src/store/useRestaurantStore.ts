@@ -6,7 +6,7 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 // API endpoint
-const API_END_POINT = "http://localhost:4000/api/v1/restaurant";
+const API_END_POINT = "https://food-mern-stack.onrender.com/api/v1/restaurant";
 axios.defaults.withCredentials = true;
 
 // export const useRestaurantStore = create<RestaurantState>()(
