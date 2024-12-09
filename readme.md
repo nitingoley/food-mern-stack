@@ -2,6 +2,12 @@ Food Delivered MERN Stack
 Overview
 Food Delivered is a feature-rich food delivery application built using the MERN stack (MongoDB, Express.js, React, and Node.js). It combines modern technologies with clean UI/UX to provide an intuitive and efficient food ordering experience. This project demonstrates expertise in both frontend and backend development, leveraging advanced operations and secure integrations.
 
+
+Test *** 
+email - nitingoley42@gmail.com
+password - 111111
+
+ 
 Features
 Frontend
 Cloudinary Integration:
