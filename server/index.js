@@ -11,7 +11,7 @@ import restaurantRoute from "./routes/restaurant.route.js";
 import menuRoute from "./routes/menu.route.js";
 import orderRoute from "./routes/order.route.js";
 import path from "path";
-
+import { fileURLToPath } from 'url';
 // app.get("/", (req, res) => {
 //   res.send("Hello, World!");
 // });
@@ -35,13 +35,16 @@ app.use("/api/v1/restaurant", restaurantRoute);
 app.use("/api/v1/menu", menuRoute);
 app.use("/api/v1/order", orderRoute);
 
+
+// Derive __dirname from import.meta.url
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-// Serve the index.html for all other routes (for client-side routing)
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
 });
- 
 const PORT = process.env.PORT || 5000;
 console.log(`Using port: ${PORT}`);
 app.listen(PORT, () => {
